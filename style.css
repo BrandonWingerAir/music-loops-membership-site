@@ -122,12 +122,8 @@ section:first-of-type article, section:first-of-type figure {
   align-items: center;
 }
 section:first-of-type > figure {
-  align-items: center;
-  justify-content: center;
-}
-section:first-of-type > figure img {
-  width: 80%;
-  height: 30%;
+  display: grid;
+  place-items: center;
 }
 section:first-of-type > div {
   position: absolute;
@@ -184,4 +180,59 @@ footer {
 footer h6 {
   font-size: 15px;
   font-weight: 600;
+}
+
+#sound-wave {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar {
+  animation-name: wave-lg;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  background: #607d8b;
+  margin: 0 1.5px;
+  height: 10px;
+  width: 1px;
+}
+.bar:nth-child(-n+7), .bar:nth-last-child(-n+7) {
+  animation-name: wave-md;
+}
+.bar:nth-child(-n+3), .bar:nth-last-child(-n+3) {
+  animation-name: wave-sm;
+}
+
+@keyframes wave-sm {
+  0% {
+    opacity: 0.35;
+    height: 10px;
+  }
+  100% {
+    opacity: 1;
+    height: 75px;
+  }
+}
+@keyframes wave-md {
+  0% {
+    opacity: 0.35;
+    height: 30px;
+  }
+  100% {
+    opacity: 1;
+    height: 125px;
+  }
+}
+@keyframes wave-lg {
+  0% {
+    opacity: 0.35;
+    height: 45px;
+  }
+  100% {
+    opacity: 1;
+    height: 210px;
+  }
 }/*# sourceMappingURL=style.css.map */

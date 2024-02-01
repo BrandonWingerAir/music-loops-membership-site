@@ -48,7 +48,7 @@
     </article>
 
     <figure>
-      <img src="/images/abstract-wave.gif" alt="">
+      <div id="sound-wave"></div>
     </figure>
 
     <div>
@@ -80,5 +80,27 @@
   <footer>
     <h6>ET ∞ | Brandon Winger-Air © 2024</h6>
   </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      const waveformContainer = document.getElementById("sound-wave");
+      
+      for (let i = 0; i < 160; i++) {
+        const waveBar = document.createElement("div");
+        waveBar.className = "bar";
+        waveformContainer.appendChild(waveBar);
+      }
+
+      const bar = document.querySelectorAll(".bar");
+      for (let i = 0; i < bar.length; i++) {
+        bar.forEach((item, j) => {
+          // Random move
+          // Initial settings:
+          // item.style.animationDuration = `${Math.random() * (0.7 - 0.2) + 0.2}s`; // Change the numbers for speed / ( max - min ) + min / ex. ( 0.5 - 0.1 ) + 0.1
+          item.style.animationDuration = `${Math.random() * (0.6 - 0.1) + 1.5}s`;
+        });
+      }
+    });
+  </script>
 </body>
 </html>
