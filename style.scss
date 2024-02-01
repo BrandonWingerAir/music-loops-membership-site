@@ -4,21 +4,45 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+section, footer, header {
+  padding: 0 7.5%;
+}
+
 header {
   display: flex;
   justify-content: space-between;
-
+  height: 98px;
+  align-items: center;
+  
   .flex-item {
-    width: 300px;
+    width: 25%;
 
     &:first-of-type {
       display: flex;
     }
 
-    &:last-of-type button {
-      position: absolute;
-      right: 0;
+    &:nth-of-type(2) {
+      width: 50%;
     }
+
+    &:last-of-type {
+      position: relative;
+
+      button {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  img {
+    width: 28px;
+    margin-right: 7px;
+  }
+
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
   }
 
   nav {
@@ -27,37 +51,63 @@ header {
     
     ul li {
       display: inline-block;
+      padding: 0 26px;
+      text-transform: uppercase;
     }
   }
 }
 
-section, footer {
-  padding: 0 10%;
-}
-
 section:first-of-type {
-  background-image: url('images/music-equalizer-bars.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom right;
-  height: 65vh;
+  height: 70vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
 
-  div {
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/music-equalizer-bars.png'), linear-gradient(#eb01a5, #d13531);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    opacity: 0.325;
+  }
+
+  article, figure {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  > figure {
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 60%;
+    }
+  }
+
+  > div {
     background: white;
     position: absolute;
-    bottom: 14%;
+    bottom: 6%;
     left: 45%;
   }
 }
+
+
 
 section:nth-of-type(2) {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10%;
-  padding-bottom: 40px;
+  height: 225px;
 
   article, div {
     margin-top: 50px;
@@ -66,7 +116,15 @@ section:nth-of-type(2) {
 
 footer {
   text-align: center;
-  padding: 25px 0;
+  height: 66px;
   background-color: #212121;
   color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h6 {
+    font-size: 15px;
+    font-weight: 600;
+  }
 }

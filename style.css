@@ -52,19 +52,39 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+section, footer, header {
+  padding: 0 7.5%;
+}
+
 header {
   display: flex;
   justify-content: space-between;
+  height: 98px;
+  align-items: center;
 }
 header .flex-item {
-  width: 300px;
+  width: 25%;
 }
 header .flex-item:first-of-type {
   display: flex;
 }
+header .flex-item:nth-of-type(2) {
+  width: 50%;
+}
+header .flex-item:last-of-type {
+  position: relative;
+}
 header .flex-item:last-of-type button {
   position: absolute;
   right: 0;
+}
+header img {
+  width: 28px;
+  margin-right: 7px;
+}
+header h1 {
+  font-size: 18px;
+  font-weight: 600;
 }
 header nav {
   width: 100%;
@@ -72,26 +92,46 @@ header nav {
 }
 header nav ul li {
   display: inline-block;
-}
-
-section, footer {
-  padding: 0 10%;
+  padding: 0 26px;
+  text-transform: uppercase;
 }
 
 section:first-of-type {
-  background-image: url("images/music-equalizer-bars.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom right;
-  height: 65vh;
+  height: 70vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
 }
-section:first-of-type div {
+section:first-of-type:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/music-equalizer-bars.png"), linear-gradient(#eb01a5, #d13531);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+  opacity: 0.325;
+}
+section:first-of-type article, section:first-of-type figure {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+section:first-of-type > figure {
+  align-items: center;
+  justify-content: center;
+}
+section:first-of-type > figure img {
+  width: 60%;
+}
+section:first-of-type > div {
   background: white;
   position: absolute;
-  bottom: 14%;
+  bottom: 6%;
   left: 45%;
 }
 
@@ -100,7 +140,7 @@ section:nth-of-type(2) {
   grid-template-columns: 1fr 1fr 1fr;
   -moz-column-gap: 10%;
        column-gap: 10%;
-  padding-bottom: 40px;
+  height: 225px;
 }
 section:nth-of-type(2) article, section:nth-of-type(2) div {
   margin-top: 50px;
@@ -108,7 +148,14 @@ section:nth-of-type(2) article, section:nth-of-type(2) div {
 
 footer {
   text-align: center;
-  padding: 25px 0;
+  height: 66px;
   background-color: #212121;
   color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer h6 {
+  font-size: 15px;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
