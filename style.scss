@@ -8,13 +8,31 @@ header {
   display: flex;
   justify-content: space-between;
 
-  div {
-    display: flex;
+  .flex-item {
+    width: 300px;
+
+    &:first-of-type {
+      display: flex;
+    }
+
+    &:last-of-type button {
+      position: absolute;
+      right: 0;
+    }
   }
 
-  ul li {
-    display: inline-block;
+  nav {
+    width: 100%;
+    text-align: center;
+    
+    ul li {
+      display: inline-block;
+    }
   }
+}
+
+section, footer {
+  padding: 0 10%;
 }
 
 section:first-of-type {
@@ -23,4 +41,32 @@ section:first-of-type {
   background-size: cover;
   background-position: bottom right;
   height: 65vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+
+  div {
+    background: white;
+    position: absolute;
+    bottom: 14%;
+    left: 45%;
+  }
+}
+
+section:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10%;
+  padding-bottom: 40px;
+
+  article, div {
+    margin-top: 50px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 25px 0;
+  background-color: #212121;
+  color: #fafafa;
 }
