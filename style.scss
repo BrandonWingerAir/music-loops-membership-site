@@ -5,7 +5,7 @@ body {
 }
 
 section, footer, header {
-  padding: 0 7.5%;
+  padding: 0 10%;
 }
 
 header {
@@ -75,7 +75,7 @@ section:first-of-type {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom right;
-    opacity: 0.325;
+    opacity: 0.25;
   }
 
   article, figure {
@@ -89,25 +89,57 @@ section:first-of-type {
     justify-content: center;
 
     img {
-      width: 60%;
+      width: 80%;
+      height: 30%;
     }
   }
 
   > div {
-    background: white;
     position: absolute;
-    bottom: 6%;
+    bottom: 10%;
     left: 45%;
+    
+    figure {
+      background: white;
+      display: inline-block;
+      border-radius: 50%;
+      
+      img {
+        width: 45px;
+        padding: 10px;
+      }
+    }
+    
+    figcaption {
+      position: relative;
+      display: inline-block;
+      width: 250px;
+      background-color: white;
+      padding: 15px 32px;
+      border-radius: 10px;
+    }
   }
 }
 
 
 
-section:nth-of-type(2) {
+section:last-of-type {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10%;
   height: 225px;
+
+  figure {
+    position: relative;
+    
+    img {
+      width: 225px;
+      position: absolute;
+      top: -135px;
+      left: 0;
+    }
+  }
+  
 
   article, div {
     margin-top: 50px;
