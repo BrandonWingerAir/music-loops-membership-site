@@ -50,4 +50,23 @@ table {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header div {
+  display: flex;
+}
+header ul li {
+  display: inline-block;
+}
+
+section:first-of-type {
+  background-image: url("images/music-equalizer-bars.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+  height: 65vh;
 }/*# sourceMappingURL=style.css.map */
