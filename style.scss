@@ -8,6 +8,10 @@ strong {
   font-weight: 600;
 }
 
+b {
+  font-weight: 700;
+}
+
 section, footer, header {
   padding: 0 10%;
 }
@@ -88,6 +92,54 @@ section:first-of-type {
     display: flex;
     align-items: center;
   }
+  
+  h2 {
+    font-size: 65px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 6px;
+  }
+
+  h3 {
+    font-size: 75px;
+    font-weight: 600;
+    text-transform: lowercase;
+    line-height: 90px;
+    margin-bottom: 25px;
+  }
+
+  button {
+    height: 50px;
+    width: 200px;
+    font-size: 17px;
+    border: 0;
+    border-radius: 50px;
+    background: black;
+    margin-right: 44px;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  span {
+    font-size: 24px;
+    font-weight: 600;
+    border-right: 2px solid black;
+    padding-right: 18px;
+    margin-right: 18px;
+    display: inline-block;
+    height: 25px;
+  }
+
+  h5 {
+    display: inline-block;
+    font-size: 17px;
+    width: 0;
+    position: relative;
+    top: 5px;
+  }
 
   > figure {
     // Soundwave Container
@@ -104,12 +156,12 @@ section:first-of-type {
     // }
   }
 
-  // Hero Quote Section
   > div {
     position: absolute;
     bottom: 10%;
     left: 45%;
     
+    // Hero Quote Section
     figure {
       background: white;
       display: inline-block;
@@ -133,9 +185,22 @@ section:first-of-type {
       position: relative;
       display: inline-block;
       width: 250px;
-      background-color: white;
       padding: 15px 32px;
       border-radius: 10px;
+      z-index: 1;
+
+      &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        opacity:85%;
+        z-index: -1;
+      }
     }
   }
 }
@@ -143,8 +208,7 @@ section:first-of-type {
 // Feature Section
 section:last-of-type {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 10%;
+  grid-template-columns: 3fr 5fr 4fr;
   height: 225px;
 
   figure {
@@ -161,6 +225,27 @@ section:last-of-type {
 
   article, div {
     margin-top: 50px;
+  }
+
+  article {
+    border-right: 2px solid #eee;
+    padding-right: 15%;
+    height: 80px;
+  }
+
+  h3, h5 {
+    display: inline-block;
+  }
+
+  h3 {
+    font-size: 53px;
+    font-weight: 700;
+    margin-right: 10%;
+    padding-left: 15%;
+  }
+
+  h5 {
+    width: 120px;
   }
 }
 
