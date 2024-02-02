@@ -4,6 +4,10 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+strong {
+  font-weight: 600;
+}
+
 section, footer, header {
   padding: 0 10%;
 }
@@ -57,6 +61,7 @@ header {
   }
 }
 
+// Hero Section
 section:first-of-type {
   height: 70vh;
   display: grid;
@@ -89,6 +94,7 @@ section:first-of-type {
     display: grid;
     place-items: center;
 
+    // Image or GIF Container
     // align-items: center;
     // justify-content: center;
 
@@ -98,6 +104,7 @@ section:first-of-type {
     // }
   }
 
+  // Hero Quote Section
   > div {
     position: absolute;
     bottom: 10%;
@@ -107,10 +114,18 @@ section:first-of-type {
       background: white;
       display: inline-block;
       border-radius: 50%;
+      position: relative;
+      left: 17px;
+      bottom: 35px;
       
       img {
-        width: 45px;
-        padding: 10px;
+        width: 40px;
+        padding: 13px 13px 14px 14px;
+        -webkit-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
+        -moz-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
+        -ms-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
+        -o-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
+        filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
       }
     }
     
@@ -125,8 +140,7 @@ section:first-of-type {
   }
 }
 
-
-
+// Feature Section
 section:last-of-type {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -150,21 +164,6 @@ section:last-of-type {
   }
 }
 
-footer {
-  text-align: center;
-  height: 66px;
-  background-color: #212121;
-  color: #fafafa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  h6 {
-    font-size: 15px;
-    font-weight: 600;
-  }
-}
-
 // Soundwave
 #sound-wave {
   height: 50px;
@@ -178,10 +177,10 @@ footer {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
-  background: #607d8b; // Change the color for the bars
+  background: #607d8b;
   margin: 0 1.5px;
   height: 10px;
-  width: 1px; // Change the number for the bar width
+  width: 1px;
 
   &:nth-child(-n + 7),
   &:nth-last-child(-n + 7) {
@@ -201,7 +200,6 @@ footer {
 }
 100% {
   opacity: 1;
-  // Initial:
   // height: 25px;
   height: 75px;
 }
@@ -210,13 +208,11 @@ footer {
 @keyframes wave-md {
 0% {
   opacity: 0.35;
-  // Initial:
   // height: 15px;
   height: 30px;
 }
 100% {
   opacity: 1;
-  // Initial:
   // height: 50px;
   height: 125px;
 }
@@ -225,14 +221,28 @@ footer {
 @keyframes wave-lg {
 0% {
   opacity: 0.35;
-  // Initial:
   // height: 15px;
   height: 45px;
 }
 100% {
   opacity: 1;
-  // Initial:
   // height: 70px;
   height: 210px;
 }
+}
+
+// Footer Section
+footer {
+  text-align: center;
+  height: 66px;
+  background-color: #212121;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h6 {
+    font-size: 15px;
+    font-weight: 600;
+  }
 }
