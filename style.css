@@ -60,7 +60,7 @@ b {
   font-weight: 700;
 }
 
-section, footer, header {
+section, footer {
   padding: 0 10%;
 }
 
@@ -68,10 +68,13 @@ header {
   display: flex;
   justify-content: space-between;
   height: 98px;
-  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0 10%;
 }
 header .flex-item {
   width: 25%;
+  display: flex;
+  align-items: center;
 }
 header .flex-item:first-of-type {
   display: flex;
@@ -82,16 +85,35 @@ header .flex-item:nth-of-type(2) {
 header .flex-item:last-of-type {
   position: relative;
 }
-header .flex-item:last-of-type button {
+header .flex-item:last-of-type a {
   position: absolute;
   right: 0;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+header .flex-item:last-of-type a p, header .flex-item:last-of-type a span {
+  display: inline-block;
+}
+header .flex-item:last-of-type a span {
+  background: #ff4d14;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-left: 1px;
+  margin-left: 8px;
 }
 header img {
   width: 28px;
   margin-right: 7px;
 }
 header h1 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 header nav {
@@ -124,7 +146,19 @@ section:first-of-type:before {
   background-position: bottom right;
   opacity: 0.25;
 }
+section:first-of-type:after {
+  content: " ";
+  z-index: 1;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+}
 section:first-of-type article, section:first-of-type figure {
+  z-index: 2;
   position: relative;
   display: flex;
   align-items: center;
@@ -166,7 +200,7 @@ section:first-of-type span {
 }
 section:first-of-type h5 {
   display: inline-block;
-  font-size: 17px;
+  font-size: 18px;
   width: 0;
   position: relative;
   top: 5px;
@@ -175,91 +209,13 @@ section:first-of-type > figure {
   display: grid;
   place-items: center;
 }
-section:first-of-type > div {
-  position: absolute;
-  bottom: 10%;
-  left: 45%;
-}
-section:first-of-type > div figure {
-  background: white;
-  display: inline-block;
-  border-radius: 50%;
-  position: relative;
-  left: 17px;
-  bottom: 35px;
-}
-section:first-of-type > div figure img {
-  width: 40px;
-  padding: 13px 13px 14px 14px;
-  -moz-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
-  -ms-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
-  -o-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
-  filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
-}
-section:first-of-type > div figcaption {
-  position: relative;
-  display: inline-block;
-  width: 250px;
-  padding: 15px 32px;
-  border-radius: 10px;
-  z-index: 1;
-}
-section:first-of-type > div figcaption:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  opacity: 85%;
-  z-index: -1;
-}
-
-section:last-of-type {
-  display: grid;
-  grid-template-columns: 3fr 5fr 4fr;
-  height: 225px;
-}
-section:last-of-type figure {
-  position: relative;
-}
-section:last-of-type figure img {
-  width: 225px;
-  position: absolute;
-  top: -135px;
-  left: 0;
-}
-section:last-of-type article, section:last-of-type div {
-  margin-top: 50px;
-}
-section:last-of-type article {
-  border-right: 2px solid #eee;
-  padding-right: 15%;
-  height: 80px;
-}
-section:last-of-type h3, section:last-of-type h5 {
-  display: inline-block;
-}
-section:last-of-type h3 {
-  font-size: 53px;
-  font-weight: 700;
-  margin-right: 10%;
-  padding-left: 15%;
-}
-section:last-of-type h5 {
-  width: 120px;
-}
-
-#sound-wave {
+section:first-of-type > figure #sound-wave {
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.bar {
+section:first-of-type > figure .bar {
   animation-name: wave-lg;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -269,13 +225,12 @@ section:last-of-type h5 {
   height: 10px;
   width: 1px;
 }
-.bar:nth-child(-n+7), .bar:nth-last-child(-n+7) {
+section:first-of-type > figure .bar:nth-child(-n+7), section:first-of-type > figure .bar:nth-last-child(-n+7) {
   animation-name: wave-md;
 }
-.bar:nth-child(-n+3), .bar:nth-last-child(-n+3) {
+section:first-of-type > figure .bar:nth-child(-n+3), section:first-of-type > figure .bar:nth-last-child(-n+3) {
   animation-name: wave-sm;
 }
-
 @keyframes wave-sm {
   0% {
     opacity: 0.35;
@@ -306,6 +261,94 @@ section:last-of-type h5 {
     height: 210px;
   }
 }
+section:first-of-type > div {
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
+}
+section:first-of-type > div figure {
+  background: white;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  left: 17px;
+  bottom: 35px;
+}
+section:first-of-type > div figure img {
+  width: 40px;
+  padding: 13px 13px 14px 14px;
+  -moz-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
+  -ms-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
+  -o-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
+}
+section:first-of-type > div figcaption {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  padding: 15px 32px;
+  z-index: 1;
+  font-size: 17px;
+}
+section:first-of-type > div figcaption:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: white;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgb(255, 255, 255) 25%);
+  z-index: -1;
+}
+
+section:last-of-type {
+  display: grid;
+  grid-template-columns: 3fr 5fr 4fr;
+  height: 225px;
+}
+section:last-of-type figure {
+  position: relative;
+}
+section:last-of-type figure img {
+  width: 210px;
+  position: absolute;
+  top: -115px;
+  left: 0;
+}
+section:last-of-type article {
+  border-right: 2px solid #eee;
+  padding-right: 15%;
+  margin-top: 50px;
+  height: 80px;
+}
+section:last-of-type article h4 {
+  font-size: 20px;
+  line-height: 29px;
+}
+section:last-of-type div {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 55px;
+}
+section:last-of-type div h3, section:last-of-type div h5 {
+  display: inline-block;
+}
+section:last-of-type div h3 {
+  font-size: 63px;
+  font-weight: 700;
+  margin-right: 11%;
+  padding-left: 13%;
+}
+section:last-of-type div h5 {
+  width: 140px;
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 5px;
+}
+
 footer {
   text-align: center;
   height: 66px;
