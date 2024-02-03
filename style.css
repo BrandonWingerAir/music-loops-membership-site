@@ -417,12 +417,43 @@ footer h6 {
     margin-right: 15px;
   }
   section:first-of-type h3 {
-    font-size: 48px;
+    font-size: 47px;
     line-height: 60px;
   }
   section:first-of-type > figure {
     transform: scale(0.7);
     position: relative;
     left: 6.5%;
+  }
+}
+@media screen and (max-width: 1270px) {
+  header .flex-item:nth-of-type(2) {
+    width: 80%;
+  }
+  header .flex-item:last-of-type {
+    display: none;
+  }
+  section:first-of-type {
+    grid-template-columns: 1fr;
+  }
+  section:first-of-type article {
+    grid-row-start: 2;
+    align-items: baseline;
+    justify-content: center;
+    text-align: center;
+  }
+  section:first-of-type article button {
+    margin-right: 15px;
+    margin-left: -85px;
+  }
+  section:first-of-type section {
+    grid-row-start: 1;
+  }
+  section:first-of-type > figure {
+    transform: scale(0.7);
+    left: 0;
+  }
+  section:first-of-type > div {
+    left: 25%;
   }
 }/*# sourceMappingURL=style.css.map */

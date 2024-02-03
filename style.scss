@@ -452,7 +452,7 @@ footer {
     }
     
     h3 {
-      font-size: 48px;
+      font-size: 47px;
       line-height: 60px;
     }
 
@@ -464,16 +464,43 @@ footer {
   }
 }
 
-// Grid Rows (Mobile)
-// section:first-of-type {
-//     grid-template-columns: 1fr;
-//     
-//     article {
-//       grid-row-start: 2;
-//     }
+@media screen and (max-width: 1270px) {
+  header {
+    .flex-item:nth-of-type(2) {
+      width: 80%;
+    }
 
-//     section {
-//       grid-row-start: 1;
+    .flex-item:last-of-type {
+      display: none;
+    }
+  }
 
-//     }
-// }
+  section:first-of-type {
+    grid-template-columns: 1fr;
+    
+    article {
+      grid-row-start: 2;
+      align-items: baseline;
+      justify-content: center;
+      text-align: center;
+
+      button {
+        margin-right: 15px;
+        margin-left: -85px;
+      }
+    }
+
+    section {
+      grid-row-start: 1;
+    }
+
+    > figure {
+      transform: scale(.7);
+      left: 0;
+    }
+
+    > div {
+      left: 25%;
+    }
+  }
+}
