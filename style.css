@@ -351,14 +351,31 @@ section:last-of-type div h5 {
 
 footer {
   text-align: center;
-  height: 66px;
   background-color: #212121;
-  color: #fafafa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: white;
+  padding: 22px 0 16px;
 }
 footer h6 {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+footer div {
+  position: relative;
+}
+footer div svg {
+  width: 54px;
+  margin-right: 8px;
+}
+footer div img {
+  width: 35px;
+}
+footer div div {
+  display: inline-block;
+  max-height: 50px;
+  overflow: hidden;
+}
+footer div div img {
+  width: 100px;
+  position: relative;
+  bottom: 17px;
 }/*# sourceMappingURL=style.css.map */

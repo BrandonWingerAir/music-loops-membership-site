@@ -370,15 +370,37 @@ section:last-of-type {
 // Footer Section
 footer {
   text-align: center;
-  height: 66px;
   background-color: #212121;
-  color: #fafafa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: white;
+  padding: 22px 0 16px;
 
   h6 {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  div {
+    position: relative;
+
+    svg {
+      width: 54px;
+      margin-right: 8px;
+    }
+
+    img {
+      width: 35px;
+    }
+
+    div {
+      display: inline-block;
+      max-height: 50px;
+      overflow: hidden;
+      
+      img {
+        width: 100px;
+        position: relative;
+        bottom: 17px;
+      }
+    }
   }
 }
