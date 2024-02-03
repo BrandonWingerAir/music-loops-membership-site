@@ -432,3 +432,48 @@ footer {
     padding: 34px 50px 0;
   }
 }
+
+@media screen and (max-width: 1600px) {
+  section:first-of-type {
+    #hero-title {
+      h2 {
+        font-size: 51px;
+        letter-spacing: -1px;
+        margin-right: 15px;
+      }
+
+      img {
+        width: 35px;
+
+        &:first-of-type {
+          margin-right: 15px;
+        }
+      }
+    }
+    
+    h3 {
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    > figure {
+      transform: scale(.7);
+      position: relative;
+      left: 6.5%;
+    }
+  }
+}
+
+// Grid Rows (Mobile)
+// section:first-of-type {
+//     grid-template-columns: 1fr;
+//     
+//     article {
+//       grid-row-start: 2;
+//     }
+
+//     section {
+//       grid-row-start: 1;
+
+//     }
+// }
