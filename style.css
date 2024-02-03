@@ -217,17 +217,23 @@ section:first-of-type h5 {
   position: relative;
   top: 5px;
 }
-section:first-of-type > figure {
+section:first-of-type #soundwave-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+section:first-of-type #soundwave-container > figure {
   display: grid;
   place-items: center;
 }
-section:first-of-type > figure #sound-wave {
+section:first-of-type #soundwave-container > figure #sound-wave {
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-section:first-of-type > figure .bar {
+section:first-of-type #soundwave-container > figure .bar {
   animation-name: wave-lg;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -237,10 +243,10 @@ section:first-of-type > figure .bar {
   height: 10px;
   width: 1px;
 }
-section:first-of-type > figure .bar:nth-child(-n+7), section:first-of-type > figure .bar:nth-last-child(-n+7) {
+section:first-of-type #soundwave-container > figure .bar:nth-child(-n+7), section:first-of-type #soundwave-container > figure .bar:nth-last-child(-n+7) {
   animation-name: wave-md;
 }
-section:first-of-type > figure .bar:nth-child(-n+3), section:first-of-type > figure .bar:nth-last-child(-n+3) {
+section:first-of-type #soundwave-container > figure .bar:nth-child(-n+3), section:first-of-type #soundwave-container > figure .bar:nth-last-child(-n+3) {
   animation-name: wave-sm;
 }
 @keyframes wave-sm {
@@ -273,12 +279,12 @@ section:first-of-type > figure .bar:nth-child(-n+3), section:first-of-type > fig
     height: 210px;
   }
 }
-section:first-of-type > div {
+section:first-of-type #quote-container {
   position: absolute;
   bottom: 10%;
   left: 45%;
 }
-section:first-of-type > div figure {
+section:first-of-type #quote-container figure {
   background: white;
   display: inline-block;
   border-radius: 50%;
@@ -286,7 +292,7 @@ section:first-of-type > div figure {
   left: 17px;
   bottom: 35px;
 }
-section:first-of-type > div figure img {
+section:first-of-type #quote-container figure img {
   width: 40px;
   padding: 13px 13px 14px 14px;
   -moz-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
@@ -294,7 +300,7 @@ section:first-of-type > div figure img {
   -o-filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
   filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.15));
 }
-section:first-of-type > div figcaption {
+section:first-of-type #quote-container figcaption {
   position: relative;
   display: inline-block;
   width: 250px;
@@ -302,7 +308,7 @@ section:first-of-type > div figcaption {
   z-index: 1;
   font-size: 17px;
 }
-section:first-of-type > div figcaption:before {
+section:first-of-type #quote-container figcaption:before {
   content: " ";
   display: block;
   position: absolute;
@@ -419,7 +425,7 @@ footer h6 {
     font-size: 47px;
     line-height: 60px;
   }
-  section:first-of-type > figure {
+  section:first-of-type #soundwave-container figure {
     transform: scale(0.7);
     position: relative;
     left: 6.5%;
@@ -428,6 +434,12 @@ footer h6 {
 @media screen and (max-width: 1270px) {
   header .flex-item:nth-of-type(2) {
     width: 100%;
+  }
+  header .flex-item:nth-of-type(2) ul {
+    text-align: right;
+  }
+  header .flex-item:nth-of-type(2) ul li:last-of-type {
+    padding-right: 0;
   }
   header .flex-item:last-of-type {
     display: none;
@@ -448,12 +460,13 @@ footer h6 {
   section:first-of-type section {
     grid-row-start: 1;
   }
-  section:first-of-type > figure {
+  section:first-of-type #soundwave-container figure {
     transform: scale(0.7);
     left: 0;
   }
-  section:first-of-type > div {
+  section:first-of-type #quote-container {
     left: 25%;
+    bottom: 4.5%;
   }
   section:last-of-type {
     padding: 50px 8% 30px;
@@ -478,5 +491,98 @@ footer h6 {
   section:last-of-type div h5 {
     font-size: 17px;
     width: 25vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  header nav ul li {
+    padding: 0 22px;
+  }
+  #soundwave-container figure {
+    transform: scale(0.625);
+  }
+}
+@media screen and (max-width: 760px) {
+  header nav ul li {
+    padding: 0 16px;
+  }
+  section {
+    padding: 0;
+  }
+  section:last-of-type figure img {
+    width: 138px;
+  }
+  section:last-of-type article h4 {
+    line-height: 26px;
+  }
+}
+@media screen and (max-width: 715px) {
+  section:last-of-type article h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  section:last-of-type div h5 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media screen and (max-width: 686px) {
+  header nav ul li {
+    padding: 0 12px;
+  }
+  #quote-container {
+    left: 21%;
+  }
+  section:last-of-type {
+    grid-template-columns: 1fr 1fr;
+  }
+  section:last-of-type article {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    border-right: 0;
+    border-left: 2px solid #eee;
+    padding-right: 7.5%;
+    padding-left: 7.5%;
+    margin-left: 0;
+  }
+  section:last-of-type article h4 {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  section:last-of-type div {
+    padding-right: 7.5%;
+    margin-top: 0;
+    position: relative;
+    top: -25px;
+  }
+  section:last-of-type div h5 {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+@media screen and (max-width: 634px) {
+  header {
+    margin: 0;
+    padding: 0 5%;
+  }
+  header h1 {
+    font-size: 18px;
+  }
+  header nav ul li {
+    padding: 0 5px;
+  }
+  section:first-of-type #soundwave-container figure {
+    transform: scale(0.4);
+    position: relative;
+    left: 0;
+  }
+}
+@media screen and (max-width: 470px) {
+  header h1 {
+    font-size: 17px;
+  }
+  header nav ul li {
+    padding: 0 1px;
+    font-size: 14px;
   }
 }/*# sourceMappingURL=style.css.map */
