@@ -19,7 +19,7 @@
         <ul>
           <li>Samples</li>
           <li>Pricing</li>
-          <li>Packs</li>
+          <li>Shop</li>
           <li>Contact</li>
         </ul>
       </nav>
@@ -69,19 +69,21 @@
         <img src="/images/music-note-cloud-icon.png" alt="">
       </figure>
       <figcaption>
-        <p>A <strong>fresh</strong> pack of <strong>inspiration</strong> <strong>everyday</strong> for various genres & instruments!</p>
+        <p>
+          A <strong>fresh</strong> pack of <strong>inspiration</strong> <strong>everyday</strong> <span>with various genres & instrument sounds<span> for music production!</span></span>
+        </p>
       </figcaption>
     </div>
   </section>
 
   <!-- Feature Section -->
   <section>
-    <figure>
-      <img src="/images/music-folder.png" alt="">
-    </figure>
+      <figure>
+        <img src="/images/music-folder.png" alt="">
+      </figure>
     <article>
       <h4>
-        Download <strong>high-quality</strong> & <strong>unique</strong> audio sample and MIDI note compositions for any DAW (Digital Audio Workstation), music software or hardware devices.
+        Download <strong>high-quality</strong> & <strong>unique</strong> audio samples and MIDI note compositions for any DAW (Digital Audio Workstation), PC & mobile software or hardware devices.
       </h4>
     </article>
 
@@ -103,10 +105,20 @@
       <div><img src="images/gumroad-inc-logo.svg" alt=""></div>
     </div>
 
-    <h6>ET ∞ (Music Producer) | Website: Brandon Winger-Air © 2024</h6>
+    <h6>ET ∞ (Music Producer) <span id="footer-bar">|</span> <span id="footer-author">Website: Brandon Winger-Air © 2024</span></h6>
   </footer>
 
   <script>
+    var docWidth = document.documentElement.offsetWidth;
+    [].forEach.call(
+      document.querySelectorAll('*'),
+      function(el) {
+        if (el.offsetWidth > docWidth) {
+          console.log(el);
+        }
+      }
+    );
+
     window.addEventListener("load", () => {
       const waveformContainer = document.getElementById("sound-wave");
       

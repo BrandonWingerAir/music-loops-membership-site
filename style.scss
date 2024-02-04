@@ -1,5 +1,10 @@
 @use 'reset';
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -175,14 +180,19 @@ section:first-of-type {
     }
   }
 
-  span {
-    font-size: 24px;
-    font-weight: 600;
-    border-right: 2px solid black;
-    padding-right: 18px;
-    margin-right: 18px;
-    display: inline-block;
-    height: 25px;
+  #hero-cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    div > span {
+      font-size: 24px;
+      font-weight: 600;
+      border-right: 2px solid black;
+      padding-right: 18px;
+      margin-right: 18px;
+      display: inline-block;
+      height: 25px;
+    }
   }
 
   h5 {
@@ -284,12 +294,12 @@ section:first-of-type {
     }
   }
 
+  // Hero Quote Section
   #quote-container {
     position: absolute;
     bottom: 10%;
     left: 45%;
     
-    // Hero Quote Section
     figure {
       background: white;
       display: inline-block;
@@ -316,6 +326,10 @@ section:first-of-type {
       padding: 15px 32px;
       z-index: 1;
       font-size: 17px;
+
+      span span {
+        display: none;
+      }
       
       &:before {
         content: ' ';
@@ -338,23 +352,23 @@ section:first-of-type {
 section:last-of-type {
   display: grid;
   grid-template-columns: 3fr 5fr 4fr;
-  padding: 50px 10% 70px;
+  padding: 60px 10%;
+  position: relative;
 
   figure {
     position: relative;
     
     img {
-      width: 210px;
       position: absolute;
       top: -115px;
       left: 0;
+      width: 210px;
     }
   }
 
   article {
     border-right: 2px solid #eee;
     padding-right: 15%;
-    height: 80px;
 
     h4 {
       font-size: 20px;
@@ -497,6 +511,30 @@ footer {
       justify-content: center;
       text-align: center;
 
+      #hero-cta {
+        grid-template-columns: 1fr;
+  
+        > div {
+          grid-row-start: 1;
+          margin-bottom: 30px;
+          
+          span {
+            padding-right: 13px;
+            margin-right: 6px;
+          }
+  
+          h5 {
+            width: auto;
+            top: -2px;
+          }
+        }
+        
+        button {
+          grid-row-start: 2;
+          margin: 0 auto;
+        }
+      }
+
       button {
         margin-right: 15px;
         margin-left: -85px;
@@ -513,14 +551,13 @@ footer {
     }
 
     #quote-container {
-      left: 25%;
-      bottom: 4.5%;
+      left: 32.5%;
+      bottom: 6.5%;
     }
   }
 
   section:last-of-type {
-    padding: 50px 8% 30px;
-    min-height: 232px;
+    padding: 50px 7.5%;
 
     figure img {
       width: 148px;
@@ -528,7 +565,7 @@ footer {
     }
 
     article {
-      padding-right: 5%;
+      padding-right: 7.5%;
       margin-left: 30px;
 
       h4 {
@@ -539,7 +576,7 @@ footer {
     div {
       h3 {
         font-size: 58px;
-        padding-left: 5%;
+        padding-left: 7.5%;
         margin-right: 3%;
       }
       
@@ -637,6 +674,17 @@ footer {
   }
 }
 
+@media screen and (max-width: 640px) {
+  section:first-of-type #quote-container {
+    left: 21.5%;
+
+    figcaption {
+      padding: 15px 24px;
+      font-size: 16px;
+    }
+  }
+}
+
 @media screen and (max-width: 634px) {
   header {
     margin: 0;
@@ -652,10 +700,9 @@ footer {
   }
   
   section:first-of-type {
+   width: 100vw;
 
-    width: 100vw;
     #soundwave-container {
-      
       div {
         width: 100%;
         height: 100%;
@@ -667,8 +714,7 @@ footer {
         margin: 0 auto;
         transform: scale(0.4);
       }
-    }
-    
+    }  
 
     article {
       width: 100vw;
@@ -717,31 +763,6 @@ footer {
       h3 {
         font-size: 35px;
       }
-  
-      #hero-cta {
-        display: grid;
-        grid-template-columns: 1fr;
-  
-        > div {
-          grid-row-start: 1;
-          margin-bottom: 30px;
-          
-          span {
-            padding-right: 13px;
-            margin-right: 6px;
-          }
-  
-          h5 {
-            width: auto;
-            top: -2px;
-          }
-        }
-        
-        button {
-          grid-row-start: 2;
-          margin: 0 auto;
-        }
-      }
     }
 
     #quote-container {
@@ -750,5 +771,108 @@ footer {
     }
   }
 
-  // TODO: Feature Section
+  section:last-of-type {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 85px;
+
+    article {
+      grid-row-start: 1;
+      grid-row-end: 1;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      width: 100%;
+      height: auto;
+      
+      h4 {
+        padding-right: 7.5%;
+      }
+    }
+
+    figure {
+      grid-row-start: 2;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 1;
+
+      img {
+        top: 35px;
+        width: 120px;
+        left: 26px;
+      }
+    }
+
+    > div {
+      grid-row-start: 2;
+      grid-row-end: 2;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      align-items: center;
+      top: 10px;
+      left: 15%;
+      padding-right: 0;
+
+      h3 {
+        padding-left: 0;
+      }
+    }
+  }
+
+  footer {
+    padding: 34px 25px 0;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  header nav ul li
+  {
+    padding: 0 1px;
+  }
+
+  section:first-of-type {
+    #quote-container {
+      bottom: 6%;
+  
+      figcaption {
+        width: 70%;
+        font-size: 15px;
+        padding: 15px 12px;
+    
+        span {
+          display: block;
+    
+          span {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+  
+  section:last-of-type {
+    > div h3 {
+      font-size: 57px;
+    }
+    
+    figure img {
+      width: 90px;
+    }
+  }
+  
+  
+  footer {
+    padding-bottom: 40px;
+
+    h6 {
+      padding: 34px 15px 0;
+
+      #footer-bar {
+        display: none;
+      }
+
+      #footer-author {
+        display: block;
+        margin-top: 25px;
+      }
+    }
+  }
 }
