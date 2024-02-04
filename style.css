@@ -221,7 +221,6 @@ section:first-of-type #soundwave-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 section:first-of-type #soundwave-container > figure {
   display: grid;
@@ -530,7 +529,7 @@ footer h6 {
     padding: 0 12px;
   }
   #quote-container {
-    left: 21%;
+    left: 20%;
   }
   section:last-of-type {
     grid-template-columns: 1fr 1fr;
@@ -571,10 +570,21 @@ footer h6 {
   header nav ul li {
     padding: 0 5px;
   }
-  section:first-of-type #soundwave-container figure {
-    transform: scale(0.4);
+  section:first-of-type {
+    width: 100vw;
+  }
+  section:first-of-type #soundwave-container div {
+    width: 100%;
+    height: 100%;
     position: relative;
-    left: 0;
+  }
+  section:first-of-type #soundwave-container figure {
+    position: relative;
+    margin: 0 auto;
+    transform: scale(0.4);
+  }
+  section:first-of-type article {
+    width: 100vw;
   }
 }
 @media screen and (max-width: 470px) {
@@ -582,7 +592,56 @@ footer h6 {
     font-size: 17px;
   }
   header nav ul li {
-    padding: 0 1px;
+    padding: 0 3px;
     font-size: 14px;
+  }
+  section:first-of-type {
+    height: 75vh;
+  }
+  section:first-of-type #soundwave-container {
+    width: 80vw;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+  }
+  section:first-of-type #soundwave-container figure {
+    transform: scale(0.33);
+  }
+  section:first-of-type article {
+    top: -40px;
+  }
+  section:first-of-type article #hero-title {
+    justify-content: center;
+  }
+  section:first-of-type article #hero-title h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+  section:first-of-type article h3 {
+    font-size: 35px;
+  }
+  section:first-of-type article #hero-cta {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  section:first-of-type article #hero-cta > div {
+    grid-row-start: 1;
+    margin-bottom: 30px;
+  }
+  section:first-of-type article #hero-cta > div span {
+    padding-right: 13px;
+    margin-right: 6px;
+  }
+  section:first-of-type article #hero-cta > div h5 {
+    width: auto;
+    top: -2px;
+  }
+  section:first-of-type article #hero-cta button {
+    grid-row-start: 2;
+    margin: 0 auto;
+  }
+  section:first-of-type #quote-container {
+    left: 3.5%;
+    bottom: 10%;
   }
 }/*# sourceMappingURL=style.css.map */

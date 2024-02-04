@@ -197,7 +197,6 @@ section:first-of-type {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 
     > figure {
       // Soundwave Container
@@ -602,7 +601,7 @@ footer {
   }
 
   #quote-container {
-    left: 21%;
+    left: 20%;
   }
 
   section:last-of-type {
@@ -652,10 +651,28 @@ footer {
     }
   }
   
-  section:first-of-type #soundwave-container figure {
-    transform: scale(0.4);
-    position: relative;
-    left: 0;
+  section:first-of-type {
+
+    width: 100vw;
+    #soundwave-container {
+      
+      div {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      
+      figure {
+        position: relative;
+        margin: 0 auto;
+        transform: scale(0.4);
+      }
+    }
+    
+
+    article {
+      width: 100vw;
+    }
   }
 }
 
@@ -666,11 +683,72 @@ footer {
     }
     
     nav ul li {
-      padding: 0 1px;
+      padding: 0 3px;
       font-size: 14px;
     }
   }
   
+  section:first-of-type {
+    height: 75vh;
 
-  // Feature Section
+    #soundwave-container {
+      width: 80vw;
+      margin: 0 auto;
+      position: relative;
+      top: -20px;
+      
+      figure {
+        transform: scale(0.33);
+      }
+    }
+
+    article {
+      top: -40px;
+
+      #hero-title {
+        justify-content: center;
+  
+        h2 {
+          font-size: 42px;
+          margin-bottom: 10px;
+        }
+      }
+      
+      h3 {
+        font-size: 35px;
+      }
+  
+      #hero-cta {
+        display: grid;
+        grid-template-columns: 1fr;
+  
+        > div {
+          grid-row-start: 1;
+          margin-bottom: 30px;
+          
+          span {
+            padding-right: 13px;
+            margin-right: 6px;
+          }
+  
+          h5 {
+            width: auto;
+            top: -2px;
+          }
+        }
+        
+        button {
+          grid-row-start: 2;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    #quote-container {
+      left: 3.5%;
+      bottom: 10%;
+    }
+  }
+
+  // TODO: Feature Section
 }
