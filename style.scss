@@ -781,6 +781,7 @@ footer {
       
       h3 {
         font-size: 35px;
+        line-height: 56px;
       }
     }
 
@@ -844,7 +845,6 @@ footer {
 @media screen and (max-width: 415px) {
   header nav ul li
   {
-    
     // NOTE: Enable after coming soon link is updated
     // padding: 0 1px;
 
@@ -897,6 +897,20 @@ footer {
         display: block;
         margin-top: 25px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section:first-of-type {
+    height: 80vh;
+    
+    article h3 {
+      line-height: 45px;
+    }
+
+    #quote-container {
+      left: 0;
     }
   }
 }
