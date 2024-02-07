@@ -91,6 +91,10 @@ header {
       padding: 0 26px;
       text-transform: uppercase;
     }
+
+    #coming-soon-link a {
+      cursor: default;
+    }
   }
 }
 
@@ -349,7 +353,7 @@ section:first-of-type {
 }
 
 // Feature Section
-section:last-of-type {
+section:nth-of-type(2) {
   display: grid;
   grid-template-columns: 3fr 5fr 4fr;
   padding: 60px 10%;
@@ -399,6 +403,11 @@ section:last-of-type {
       margin-top: 5px;
     }
   }
+}
+
+// Music Player Section
+section:last-of-type {
+  margin: 10px 10% 47px;
 }
 
 // Footer Section
@@ -556,7 +565,7 @@ footer {
     }
   }
 
-  section:last-of-type {
+  section:nth-of-type(2) {
     padding: 50px 7.5%;
 
     figure img {
@@ -607,7 +616,7 @@ footer {
     padding: 0;
   }
 
-  section:last-of-type {
+  section:nth-of-type(2) {
     figure img {
       width: 138px;
     }
@@ -619,7 +628,12 @@ footer {
 }
 
 @media screen and (max-width: 715px) {
-  section:last-of-type {
+  // NOTE: Remove after link is updated
+  #coming-soon-link {
+    display: none;
+  }
+
+  section:nth-of-type(2) {
     article h4 {
       font-size: 16px;
       line-height: 24px;
@@ -641,7 +655,7 @@ footer {
     left: 20%;
   }
 
-  section:last-of-type {
+  section:nth-of-type(2) {
     grid-template-columns: 1fr 1fr;
 
     article {
@@ -729,7 +743,12 @@ footer {
     }
     
     nav ul li {
-      padding: 0 3px;
+      // NOTE: Enable after coming soon link is updated
+      // padding: 0 3px;
+
+      // NOTE: Remove after coming soon link is updated
+      padding: 0 9px;
+      
       font-size: 14px;
     }
   }
@@ -771,7 +790,7 @@ footer {
     }
   }
 
-  section:last-of-type {
+  section:nth-of-type(2) {
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 85px;
 
@@ -825,7 +844,12 @@ footer {
 @media screen and (max-width: 415px) {
   header nav ul li
   {
-    padding: 0 1px;
+    
+    // NOTE: Enable after coming soon link is updated
+    // padding: 0 1px;
+
+    // NOTE: Remove after coming soon link is updated
+    padding: 0 4px;
   }
 
   section:first-of-type {
@@ -848,7 +872,7 @@ footer {
     }
   }
   
-  section:last-of-type {
+  section:nth-of-type(2) {
     > div h3 {
       font-size: 57px;
     }

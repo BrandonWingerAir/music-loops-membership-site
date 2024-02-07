@@ -135,6 +135,9 @@ header nav ul li {
   padding: 0 26px;
   text-transform: uppercase;
 }
+header nav #coming-soon-link a {
+  cursor: default;
+}
 
 section:first-of-type {
   height: 70vh;
@@ -338,48 +341,52 @@ section:first-of-type #quote-container figcaption:before {
   z-index: -1;
 }
 
-section:last-of-type {
+section:nth-of-type(2) {
   display: grid;
   grid-template-columns: 3fr 5fr 4fr;
   padding: 60px 10%;
   position: relative;
 }
-section:last-of-type figure {
+section:nth-of-type(2) figure {
   position: relative;
 }
-section:last-of-type figure img {
+section:nth-of-type(2) figure img {
   position: absolute;
   top: -115px;
   left: 0;
   width: 210px;
 }
-section:last-of-type article {
+section:nth-of-type(2) article {
   border-right: 2px solid #eee;
   padding-right: 15%;
 }
-section:last-of-type article h4 {
+section:nth-of-type(2) article h4 {
   font-size: 20px;
   line-height: 29px;
 }
-section:last-of-type div {
+section:nth-of-type(2) div {
   display: flex;
   align-items: flex-start;
   margin-top: 5px;
 }
-section:last-of-type div h3, section:last-of-type div h5 {
+section:nth-of-type(2) div h3, section:nth-of-type(2) div h5 {
   display: inline-block;
 }
-section:last-of-type div h3 {
+section:nth-of-type(2) div h3 {
   font-size: 63px;
   font-weight: 700;
   margin-right: 11%;
   padding-left: 13%;
 }
-section:last-of-type div h5 {
+section:nth-of-type(2) div h5 {
   width: 140px;
   font-size: 18px;
   line-height: 25px;
   margin-top: 5px;
+}
+
+section:last-of-type {
+  margin: 10px 10% 47px;
 }
 
 footer {
@@ -503,26 +510,26 @@ footer h6 {
     left: 32.5%;
     bottom: 6.5%;
   }
-  section:last-of-type {
+  section:nth-of-type(2) {
     padding: 50px 7.5%;
   }
-  section:last-of-type figure img {
+  section:nth-of-type(2) figure img {
     width: 148px;
     top: -92px;
   }
-  section:last-of-type article {
+  section:nth-of-type(2) article {
     padding-right: 7.5%;
     margin-left: 30px;
   }
-  section:last-of-type article h4 {
+  section:nth-of-type(2) article h4 {
     font-size: 17px;
   }
-  section:last-of-type div h3 {
+  section:nth-of-type(2) div h3 {
     font-size: 58px;
     padding-left: 7.5%;
     margin-right: 3%;
   }
-  section:last-of-type div h5 {
+  section:nth-of-type(2) div h5 {
     font-size: 17px;
     width: 25vw;
   }
@@ -542,19 +549,22 @@ footer h6 {
   section {
     padding: 0;
   }
-  section:last-of-type figure img {
+  section:nth-of-type(2) figure img {
     width: 138px;
   }
-  section:last-of-type article h4 {
+  section:nth-of-type(2) article h4 {
     line-height: 26px;
   }
 }
 @media screen and (max-width: 715px) {
-  section:last-of-type article h4 {
+  #coming-soon-link {
+    display: none;
+  }
+  section:nth-of-type(2) article h4 {
     font-size: 16px;
     line-height: 24px;
   }
-  section:last-of-type div h5 {
+  section:nth-of-type(2) div h5 {
     font-size: 16px;
     line-height: 26px;
   }
@@ -566,10 +576,10 @@ footer h6 {
   #quote-container {
     left: 20%;
   }
-  section:last-of-type {
+  section:nth-of-type(2) {
     grid-template-columns: 1fr 1fr;
   }
-  section:last-of-type article {
+  section:nth-of-type(2) article {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
@@ -579,17 +589,17 @@ footer h6 {
     padding-left: 7.5%;
     margin-left: 0;
   }
-  section:last-of-type article h4 {
+  section:nth-of-type(2) article h4 {
     font-size: 15px;
     line-height: 30px;
   }
-  section:last-of-type div {
+  section:nth-of-type(2) div {
     padding-right: 7.5%;
     margin-top: 0;
     position: relative;
     top: -25px;
   }
-  section:last-of-type div h5 {
+  section:nth-of-type(2) div h5 {
     font-size: 15px;
     line-height: 26px;
   }
@@ -636,7 +646,7 @@ footer h6 {
     font-size: 17px;
   }
   header nav ul li {
-    padding: 0 3px;
+    padding: 0 9px;
     font-size: 14px;
   }
   section:first-of-type {
@@ -668,11 +678,11 @@ footer h6 {
     left: 3.5%;
     bottom: 10%;
   }
-  section:last-of-type {
+  section:nth-of-type(2) {
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 85px;
   }
-  section:last-of-type article {
+  section:nth-of-type(2) article {
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 1;
@@ -680,21 +690,21 @@ footer h6 {
     width: 100%;
     height: auto;
   }
-  section:last-of-type article h4 {
+  section:nth-of-type(2) article h4 {
     padding-right: 7.5%;
   }
-  section:last-of-type figure {
+  section:nth-of-type(2) figure {
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 1;
   }
-  section:last-of-type figure img {
+  section:nth-of-type(2) figure img {
     top: 35px;
     width: 120px;
     left: 26px;
   }
-  section:last-of-type > div {
+  section:nth-of-type(2) > div {
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 2;
@@ -704,7 +714,7 @@ footer h6 {
     left: 15%;
     padding-right: 0;
   }
-  section:last-of-type > div h3 {
+  section:nth-of-type(2) > div h3 {
     padding-left: 0;
   }
   footer {
@@ -713,7 +723,7 @@ footer h6 {
 }
 @media screen and (max-width: 415px) {
   header nav ul li {
-    padding: 0 1px;
+    padding: 0 4px;
   }
   section:first-of-type #quote-container {
     bottom: 6%;
@@ -729,10 +739,10 @@ footer h6 {
   section:first-of-type #quote-container figcaption span span {
     display: inline;
   }
-  section:last-of-type > div h3 {
+  section:nth-of-type(2) > div h3 {
     font-size: 57px;
   }
-  section:last-of-type figure img {
+  section:nth-of-type(2) figure img {
     width: 90px;
   }
   footer {
